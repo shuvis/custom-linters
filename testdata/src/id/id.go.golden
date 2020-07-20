@@ -1,0 +1,26 @@
+package id
+
+const constID = "ID"
+
+var myID = "Id"
+
+type StructWithID struct {
+	ID string
+}
+
+type InterfaceWithID interface {
+	GetByID(myID string) (otherID string)
+}
+
+func GetID(id string) {}
+
+func MapSomethingToID(something int) string {
+	someID := "some Id"
+	return myID + someID
+}
+
+func GetID() (MyID string) {
+	return constID
+}
+
+func MyIDAndSomeOtherIDAndID() {}
