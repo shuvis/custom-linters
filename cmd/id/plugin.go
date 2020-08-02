@@ -6,10 +6,10 @@ import (
 	"golang.org/x/tools/go/analysis"
 )
 
-var AnalyzerPlugin Plugin
+var AnalyzerPlugin plugin
 
-type Plugin struct{}
+type plugin struct{}
 
-func (p Plugin) GetAnalyzers() []*analysis.Analyzer {
+func (plugin) GetAnalyzers() []*analysis.Analyzer {
 	return []*analysis.Analyzer{id.Analyzer}
 }
