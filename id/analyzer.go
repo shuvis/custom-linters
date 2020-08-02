@@ -27,8 +27,7 @@ var (
 	AnalyzerPlugin Plugin
 )
 
-type Plugin struct {
-}
+type Plugin struct{}
 
 func (p Plugin) GetAnalyzers() []*analysis.Analyzer {
 	return []*analysis.Analyzer{Analyzer}
