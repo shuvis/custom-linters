@@ -1,4 +1,4 @@
-package main
+package id
 
 import (
 	"fmt"
@@ -19,19 +19,12 @@ const (
 var (
 	wrongPatternRegex = regexp.MustCompile(invalidPattern)
 	Analyzer          = &analysis.Analyzer{
-		Name:     "id-linter",
+		Name:     "id",
 		Doc:      "Checks that ID is uppercase",
 		Run:      run,
 		Requires: []*analysis.Analyzer{inspect.Analyzer},
 	}
-	AnalyzerPlugin Plugin
 )
-
-type Plugin struct{}
-
-func (p Plugin) GetAnalyzers() []*analysis.Analyzer {
-	return []*analysis.Analyzer{Analyzer}
-}
 
 func run(pass *analysis.Pass) (interface{}, error) {
 	visitor := func(node ast.Node) bool {

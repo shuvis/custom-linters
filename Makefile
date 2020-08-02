@@ -1,2 +1,5 @@
 plugin:
-	@go build -o out/id-linter.so -buildmode=plugin id/analyzer.go
+	@go build -o out/plugin/id.so -buildmode=plugin cmd/id/plugin.go
+
+cli:
+	@go build -o out/cli/id-linter cmd/id/cli.go
