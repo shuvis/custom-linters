@@ -1,4 +1,4 @@
-module id-linter
+module github.com/shuvis/custom-linters
 
 go 1.14
 
