@@ -1,7 +1,7 @@
 package main
 
 import (
-	"id-linter/internal/id"
+	"github.com/shuvis/custom-linters/internal/id"
 
 	"golang.org/x/tools/go/analysis"
 )
